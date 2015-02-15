@@ -78,5 +78,16 @@ filled.data$date <- as.Date(filled.data$date)
 filled.data$day <- sapply(filled.data$date, FUN=Day)
 ## ------------------------------------------------------------------------
 averages <- aggregate(steps ~ interval + day, data=filled.data, mean)
-ggplot(averages, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) +
+
+
+
+ggplot(averages, aes(interval, steps)) + facet_grid(day ~ .) +
+        geom_line(colour="coral1", size=1.0) +
         xlab("5-minute interval") + ylab("Number of steps")
+
+  
+
+
+
+
+
