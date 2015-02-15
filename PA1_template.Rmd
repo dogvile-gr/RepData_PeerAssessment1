@@ -7,6 +7,7 @@
 ## Loading and preprocessing the data
 
 Read in the data.
+```{r}
 unzip(zipfile="repdata_data_activity.zip")
 data <- read.csv("activity.csv")
 ```
