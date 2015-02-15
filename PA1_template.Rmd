@@ -74,7 +74,7 @@ fill.value <- function(steps, interval) {
 
 ```
 
-comparing the mean and median steps for each day between the original data set with NAvalues and the imputed data set.
+Comparing the mean and median steps for each day between the original data set with NAvalues and the imputed data set.
 ```{r}
 total.steps <- tapply(filled.data$steps, filled.data$date, FUN=sum)
 #mean and median total number of steps taken per day 
