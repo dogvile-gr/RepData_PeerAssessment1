@@ -93,7 +93,7 @@ Identify the number of intervals with missing step counts ("NA's"):
 all.na <- sum(is.na(data$steps))
 ```
 
-```r
+
 Replacing each missing value with the mean value of its 5-minute interval
 ```{r}
 fill.value <- function(steps, interval) {
