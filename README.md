@@ -117,7 +117,7 @@ median_noNA <- median(total.steps)
 mean_withNA <- mean(data.sum$steps, na.rm=TRUE)
 median_withNA <- median(data.sum$steps, na.rm=TRUE)
 
-
+```
 
 
 And a histogram of the imputed dataset.
@@ -126,9 +126,7 @@ And a histogram of the imputed dataset.
 qplot(total.steps, binwidth=1000, xlab="total number of steps taken each day")
 ```
 
-```
-## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
-```
+
 
 ![plot of chunk histogram_imputed](figures/histogram2.png) 
 
@@ -157,10 +155,11 @@ filled.data$day <- sapply(filled.data$date, FUN=Day)
 
 
 Now let's compare the patterns between weekdays and weekends.
+
 ```{r timeseries_daytype}
 ggplot(averages, aes(interval, steps)) + facet_grid(day ~ .) +
         geom_line(colour="coral1", size=1.0) +
         xlab("5-minute interval") + ylab("Number of steps")
 ```
 
-![plot of chunk timeseries_daytype](figures/timeseries_daytype.png) 
+![plot of chunk timeseries_daytype](figures/timeseriesplot.png) 
