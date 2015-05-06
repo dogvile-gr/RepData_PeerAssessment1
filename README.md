@@ -162,4 +162,4 @@ ggplot(averages, aes(interval, steps)) + facet_grid(day ~ .) +
         xlab("5-minute interval") + ylab("Number of steps")
 ```
 
-![plot of chunk timeseries_daytype](figures/timeseriesplot.png) 
+![plot of chunk timeseries_daytype](figures/patterns.png) 
